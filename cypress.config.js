@@ -2,6 +2,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
+    video: false,
     ceoLogin: 'ceo@tourmalinecore.com',
     ceoPassword: 'cEoPa$$wo1d',
     defaultCommandTimeout: 30000,
