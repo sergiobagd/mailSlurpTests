@@ -77,6 +77,10 @@ describe('Adding a new user in the system via email sending', () => {
                     cy.contains('Log In')
                       .click();
                     cy.get('.auth-page__result-message').should('have.text', 'Error: Invalid email or password. Check the correctness of the entered data.');
+                    cy.get('#password').type(newPassword2);
+                    cy.contains('Log In')
+                      .click();
+                    cy.get(':nth-child(1) > .sidebar-item').should('have.text', 'Profile');
                   });
               });
           });
